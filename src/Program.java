@@ -36,32 +36,67 @@
 //Polymorphism refers to the idea of having many forms,it occurs when there is a hierarchy of classes related to each other through inheritance
 //A call to a member method will cause a different implementation to be executed, depending on the type of the object invoking the method
 //When methods have the same name but different parameters, it is called method overloading
-class Program {
-    static double max(double a, double b) {
-        if(a > b) {
-            return a;
-        }
-        else {
-            return b;
-        }
-    }
-    static int max(int a, int b) {
-        if(a > b) {
-            return a;
-        }
-        else {
-            return b;
-        }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(max(8, 17));
-        System.out.println(max(3.14, 7.68));
-    }
-
-}
+//class Program {
+//    static double max(double a, double b) {
+//        if(a > b) {
+//            return a;
+//        }
+//        else {
+//            return b;
+//        }
+//    }
+//    static int max(int a, int b) {
+//        if(a > b) {
+//            return a;
+//        }
+//        else {
+//            return b;
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        System.out.println(max(8, 17));
+//        System.out.println(max(3.14, 7.68));
+//    }
+//
+//}
 
 //Abstraction provides the outside world with only essential information,
 // in a process of representing essential features without including implementation details
 
+//
+//class Machine {
+//    public void start() {
+//        System.out.println("Machine started");
+//    }
+//}
+//
+//class Program {
+//    public static void main(String [] args) {
+//        Machine machine = new Machine() {
+//            @Override public void start() {
+//                System.out.println("New Machine started");
+//            }
+//        };
+//        machine.start();
+//    }
+//}
 
+//Exception Handling, a technique that lets a programmer catch exceptions that occur due to bad user input, network errors and more.
+class Program {
+    double x = 12.0;
+    double y = 13.0;
+
+    public  static void main(String [] args) {
+        Program program = new Program();
+
+        try{
+            double z = program.x/program.y;
+            System.out.println(z);
+        }
+        catch (Exception e) {
+            System.out.println("Error");
+        }
+    }
+
+}
